@@ -6,17 +6,18 @@ const webpack = require('webpack');
 
 module.exports = {
   entry: {
-    index: './src/index.js',
+    app: './src/index.js',
+    print: './src/print.js',
+    show: './src/show.js',
   },
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
-      title: 'Code Splitting',
+      title: 'Output Management',
     }),
   ],
   output: {
     filename: '[name].bundle.js',
-    chunkFilename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
 };
