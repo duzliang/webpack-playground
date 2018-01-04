@@ -1,14 +1,23 @@
-import { cube } from './math.js';
-
-import printMe from './print.js';
+import _ from 'lodash';
+import print from './print.js';
+import show from './show.js';
 
 function component() {
   let element = document.createElement('pre');
 
   element.innerHTML = [
     'Hello webpack!',
-    '5 cubed is equal to ' + cube(5),
   ].join('\n\n');
+
+  let button = document.createElement('button');
+  button.innerHTML = '点击我';
+  button.onclick = print;
+
+  let input = document.createElement('input');
+  input.value = show(4);
+
+  element.appendChild(button);
+  element.appendChild(input);
 
   return element;
 }

@@ -1,3 +1,5 @@
+import { cube } from './math.js';
+
 export default function printMe() {
-  console.log('Updating print.js..sss.')
+  console.log('render print', cube(2));
 }

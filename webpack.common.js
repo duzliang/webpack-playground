@@ -7,6 +7,8 @@ const webpack = require('webpack');
 module.exports = {
   entry: {
     app: './src/index.js',
+    print: './src/print.js',
+    show: './src/show.js',
   },
   plugins: [
     new CleanWebpackPlugin(['dist']),
