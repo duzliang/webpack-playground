@@ -6,7 +6,12 @@ const webpack = require('webpack');
 
 module.exports = {
   entry: {
-    index: './src/index.js',
+    app: './src/index.js',
+    show: './src/show.js',
+  },
+  devtool: 'inline-source-map',
+  devServer: {
+    contentBase: './dist',
   },
   plugins: [
     new CleanWebpackPlugin(['dist']),
@@ -16,7 +21,6 @@ module.exports = {
   ],
   output: {
     filename: '[name].bundle.js',
-    chunkFilename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
 };
